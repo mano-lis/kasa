@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 92%;
+  margin: auto;
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    .link-container {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    a {
+      color: #ff6060;
+      font-size: 1.5rem;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
