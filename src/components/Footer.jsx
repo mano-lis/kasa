@@ -1,4 +1,4 @@
-import "../styles/footer.scss"
+import "../styles/components/footer.scss"
 import footer_logo from "../assets/footer_logo.png"
 
 function Footer() {

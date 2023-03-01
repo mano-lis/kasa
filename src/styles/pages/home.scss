@@ -1,0 +1,29 @@
+.img-container {
+  position: relative;
+  margin-top: 4%;
+  img {
+    width: 100%;
+    border-radius: 25px;
+    filter: brightness(0.8);
+  }
+  h1 {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    color: white;
+    font-size: 48px;
+    font-weight: 500;
+  }
+}
+
+.cards-container {
+  margin-top: 4%;
+  padding: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  justify-content: space-around;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+}
