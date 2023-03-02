@@ -2,10 +2,8 @@ import { useState } from "react"
 import "../styles/components/collapse.scss"
 import arrow from "../assets/vector_desktop.png"
 
-function Collapse({ collapseTitle }) {
+function Collapse({ collapseTitle, content }) {
   const [isOpen, setIsOpen] = useState(false)
-  const text =
-    "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
 
   return (
     <section className="collapse-block">
@@ -21,7 +19,7 @@ function Collapse({ collapseTitle }) {
       {isOpen && (
         <article className="collapse-content">
           <div className="collapse-text-content">
-            <p>{text}</p>
+            <p>{content}</p>
           </div>
         </article>
       )}

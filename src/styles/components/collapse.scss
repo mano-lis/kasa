@@ -1,5 +1,6 @@
+@import "../utils/variables";
+
 .collapse-block {
-  width: 80%;
   margin-top: 2.5%;
   margin-left: auto;
   margin-right: auto;
@@ -13,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ff6060;
+  background-color: $text-primary;
   color: white;
   padding-left: 2%;
   border-radius: 5px;
@@ -28,8 +29,8 @@
 }
 
 .collapse-content {
-  background-color: #f6f6f6;
-  color: #ff6060;
+  background-color: $background-grey;
+  color: $text-primary;
   .collapse-text-content {
     padding: 2%;
     p {

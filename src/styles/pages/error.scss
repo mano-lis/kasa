@@ -1,0 +1,24 @@
+@import "../utils/variables";
+
+.main-container-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    margin-bottom: 1%;
+    color: $text-primary;
+    font-size: 18rem;
+    font-weight: 700;
+  }
+  p {
+    color: $text-primary;
+    font-size: 2rem;
+  }
+  a {
+    margin-top: 6%;
+    margin-bottom: 6%;
+    color: $text-primary;
+    font-size: 1.15rem;
+  }
+}

@@ -1,3 +1,5 @@
+@import "../utils/variables";
+
 .img-container {
   position: relative;
   margin-top: 4%;
@@ -22,8 +24,8 @@
   padding: 4%;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 40px;
+  row-gap: 75px;
   justify-content: space-around;
-  background-color: #f6f6f6;
+  background-color: $background-grey;
   border-radius: 25px;
 }
