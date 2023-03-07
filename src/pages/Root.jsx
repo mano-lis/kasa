@@ -9,7 +9,7 @@ export function getDatas() {
   return datas
 }
 
-function Root(houseDatas) {
+function Root() {
   return (
     <>
       <Header />

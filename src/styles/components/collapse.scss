@@ -1,12 +1,12 @@
 @import "../utils/variables";
 
 .collapse-block {
-  margin-top: 2.5%;
   margin-left: auto;
   margin-right: auto;
   h1 {
     font-size: 1.5em;
     font-weight: 500;
+    color: white;
   }
 }
 
@@ -16,27 +16,34 @@
   align-items: center;
   background-color: $text-primary;
   color: white;
-  padding-left: 2%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
   border-radius: 5px;
-  .arrow-content {
-    display: flex;
-    height: 65px;
-    width: 75px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 
 .collapse-content {
   background-color: $background-grey;
   color: $text-primary;
-  .collapse-text-content {
-    padding: 2%;
-    p {
-      font-size: 1.5em;
-      font-weight: 400;
-      line-height: 35px;
-    }
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.6s ease-in-out;
+  &.active {
+    max-height: 800px;
+    transition: max-height 0.6s ease-in-out;
+  }
+}
+
+.collapse-text-content {
+  padding: 2%;
+  p,
+  li {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 35px;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
   }
 }

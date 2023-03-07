@@ -12,11 +12,14 @@ function About() {
       <Banner source={aboutBanner} altText={`image de montagne`} home={false} />
       <div className="collapse-container">
         {collapseTitles.map((collapseTitle, i) => (
-          <Collapse
-            key={collapseTitle + i}
-            collapseTitle={collapseTitle}
-            content={text}
-          />
+          <div className="collapse-about">
+            <Collapse
+              key={collapseTitle + i}
+              collapseTitle={collapseTitle}
+              content={text}
+              headerLevel={1}
+            />
+          </div>
         ))}
       </div>
     </div>

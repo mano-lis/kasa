@@ -6,40 +6,42 @@ import "../styles/components/slideShow.scss"
 function SlideShow({ data }) {
   const [pictureIndex, setPictureIndex] = useState(0)
   const slidePicture = (e) => {
-    console.log(e.target.classList.contains("left-arrow"))
     if (e.target.classList.contains("left-arrow")) {
-      setPictureIndex(pictureIndex - 1)
+      pictureIndex > 0
+        ? setPictureIndex(pictureIndex - 1)
+        : setPictureIndex(data.pictures.length - 1)
     }
     if (e.target.classList.contains("right-arrow")) {
-      setPictureIndex(pictureIndex + 1)
+      pictureIndex < data.pictures.length - 1
+        ? setPictureIndex(pictureIndex + 1)
+        : setPictureIndex(0)
     }
   }
 
   return (
     <div className="slideshow-container">
-      {pictureIndex > 0 && (
-        <img
-          className="arrow left-arrow"
-          alt="slider de gauche"
-          src={leftArrow}
-          onClick={slidePicture}
-        />
-      )}
+      <img
+        className="arrow left-arrow"
+        alt="slider de gauche"
+        src={leftArrow}
+        onClick={slidePicture}
+      />
       <img
         className="house-picture"
         alt="partie du logement"
         src={data.pictures[pictureIndex]}
       />
-      <>
-        {pictureIndex < data.pictures.length - 1 && (
-          <img
-            className="arrow right-arrow"
-            alt="slider de droite"
-            src={rightArrow}
-            onClick={slidePicture}
-          />
-        )}
-      </>
+      <img
+        className="arrow right-arrow"
+        alt="slider de droite"
+        src={rightArrow}
+        onClick={slidePicture}
+      />
+      <div className="img-number">
+        <p>
+          {pictureIndex + 1} / {data.pictures.length}
+        </p>
+      </div>
     </div>
   )
 }

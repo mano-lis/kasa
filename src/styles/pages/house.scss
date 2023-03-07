@@ -1,0 +1,57 @@
+@import "../utils/variables";
+
+h1,
+h2 {
+  color: $text-primary;
+}
+
+.infos-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.tags {
+  display: flex;
+}
+
+.renter {
+  display: flex;
+  height: 100px;
+  .renter-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $text-primary;
+    font-size: 20px;
+    span {
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+  }
+  .profile-pic {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.renter-infos {
+  position: relative;
+  .stars {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    img {
+      margin-left: 5px;
+    }
+  }
+}
+
+.house-collapse-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5%;
+  .collapse-part {
+    width: 45%;
+  }
+}

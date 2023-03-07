@@ -1,0 +1,14 @@
+@import "../utils/variables";
+
+.tag-container {
+  background-color: $text-primary;
+  color: white;
+  margin-right: 2%;
+  font-size: 14px;
+  width: 150px;
+  height: 35px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
