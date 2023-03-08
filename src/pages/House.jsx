@@ -51,14 +51,14 @@ function House() {
           <Collapse
             collapseTitle={"Description"}
             content={data.description}
-            headerLevel={3}
+            HeaderElement={"h3"}
           />
         </div>
         <div className="collapse-part">
           <Collapse
             collapseTitle={"Équipements"}
             content={data.equipments}
-            headerLevel={3}
+            HeaderElement={"h3"}
           />
         </div>
       </div>

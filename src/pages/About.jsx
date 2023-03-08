@@ -17,7 +17,7 @@ function About() {
               key={collapseTitle + i}
               collapseTitle={collapseTitle}
               content={text}
-              headerLevel={1}
+              HeaderElement={"h1"}
             />
           </div>
         ))}

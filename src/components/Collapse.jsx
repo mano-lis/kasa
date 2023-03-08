@@ -2,14 +2,13 @@ import { useState } from "react"
 import "../styles/components/collapse.scss"
 import arrow from "../assets/vector_desktop.png"
 
-function Collapse({ collapseTitle, content, headerLevel }) {
+function Collapse({ collapseTitle, content, HeaderElement = "h1" }) {
   const [isOpen, setIsOpen] = useState(false)
-  const HeaderTag = `h${headerLevel}`
 
   return (
     <section className="collapse-block">
       <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
-        <HeaderTag>{collapseTitle}</HeaderTag>
+        <HeaderElement>{collapseTitle}</HeaderElement>
         <img src={arrow} alt="icône de dropdown" className="arrow-slide" />
       </div>
       <article
