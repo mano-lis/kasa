@@ -4,7 +4,7 @@ import "../styles/components/card.scss"
 function Card({ data, isLoading }) {
   return (
     <div className="card-thumb">
-      {isLoading === false && (
+      {(isLoading === false || !data.cover) && (
         <img
           src={data.cover}
           alt="couverture du logement"
