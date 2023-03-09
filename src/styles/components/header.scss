@@ -4,13 +4,16 @@ header {
   display: flex;
   justify-content: space-between;
   padding-top: 2%;
-  width: 90%;
   margin: auto;
+  max-width: 1240px;
+  width: 95%;
   nav {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 25%;
+    min-width: 350px;
+    @media (max-width: $mobile) {
+      min-width: 260px;
+    }
     .link-container {
       width: 50%;
       display: flex;
@@ -20,6 +23,10 @@ header {
       color: $text-primary;
       font-size: 1.5rem;
       text-decoration: none;
+      @media (max-width: $mobile) {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
       &:hover {
         text-decoration: underline;
       }

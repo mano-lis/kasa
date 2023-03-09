@@ -9,6 +9,9 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin-top: 2%;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
 }
 
 .tags {
@@ -18,6 +21,10 @@ h2 {
 .renter {
   display: flex;
   height: 100px;
+  @media (max-width: $mobile) {
+    margin-top: 30px;
+    justify-content: flex-end;
+  }
   .renter-name {
     display: flex;
     flex-direction: column;
@@ -42,6 +49,10 @@ h2 {
     bottom: 5px;
     right: 0;
     min-width: 175px;
+    @media (max-width: $mobile) {
+      left: 0;
+      bottom: 30px;
+    }
     img {
       margin-left: 5px;
     }
@@ -52,7 +63,14 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin-top: 2.5%;
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
   .collapse-part {
     width: 45%;
+    @media (max-width: $mobile) {
+      width: 100%;
+      margin-bottom: 5%;
+    }
   }
 }

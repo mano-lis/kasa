@@ -1,37 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import Home from "./pages/Home"
 import reportWebVitals from "./reportWebVitals"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import About from "./pages/About"
-import House from "./pages/House"
-import ErrorPage from "./pages/ErrorPage"
-import Root, { getDatas } from "./pages/Root"
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    loader: getDatas,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-        loader: getDatas,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "house/:houseId",
-        element: <House />,
-        loader: getDatas,
-      },
-    ],
-  },
-])
+import { router } from "./routes/Router"
+import { RouterProvider } from "react-router-dom"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

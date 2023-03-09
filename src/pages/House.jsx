@@ -1,12 +1,14 @@
-import { useLoaderData, useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import Collapse from "../components/Collapse"
 import SlideShow from "../components/SlideShow"
 import Tag from "../components/Tag"
 import "../styles/pages/house.scss"
-import redStar from "../assets/red-star.png"
+import Rating from "../components/Rating"
+import { useContext } from "react"
+import { DataContext } from "./Root"
 
 function House() {
-  const datas = useLoaderData()
+  const datas = useContext(DataContext)
   const { state } = useLocation()
 
   const data = datas.find((data) => data.id === state.houseId)
@@ -38,11 +40,7 @@ function House() {
             ></img>
           </div>
           <div className="stars">
-            <img src={redStar} alt="étoile rouge"></img>
-            <img src={redStar} alt="étoile rouge"></img>
-            <img src={redStar} alt="étoile rouge"></img>
-            <img src={redStar} alt="étoile rouge"></img>
-            <img src={redStar} alt="étoile rouge"></img>
+            <Rating data={data} />
           </div>
         </div>
       </div>

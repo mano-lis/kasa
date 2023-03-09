@@ -2,21 +2,21 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import { Outlet } from "react-router-dom"
 import "../styles/global.scss"
-import houseDatas from "../data/logements.json"
+import { createContext } from "react"
+import datas from "../data/logements.json"
 
-export function getDatas() {
-  const datas = houseDatas
-  return datas
-}
+export const DataContext = createContext()
 
 function Root() {
   return (
     <>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
+      <DataContext.Provider value={datas}>
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </DataContext.Provider>
     </>
   )
 }

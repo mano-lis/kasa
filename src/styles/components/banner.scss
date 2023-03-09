@@ -1,0 +1,33 @@
+@import "../utils/variables";
+
+.img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  picture {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    border-radius: 25px;
+    min-height: 223px;
+    filter: brightness(0.8);
+    @media (max-width: 768px) {
+      min-height: 111px;
+    }
+  }
+  h1 {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    font-size: 48px;
+    font-weight: 500;
+  }
+  @media (max-width: $mobile) {
+    h1 {
+      font-size: 28px;
+    }
+  }
+}
