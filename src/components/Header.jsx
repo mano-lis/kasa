@@ -14,10 +14,10 @@ function Header() {
       </div>
       <nav>
         <div className="link-container">
-          <Link to={`/`}>Accueil</Link>
+          <Link to={"/"}>Accueil</Link>
         </div>
         <div className="link-container">
-          <Link to={`/about`}>À propos</Link>
+          <Link to={"/about"}>À propos</Link>
         </div>
       </nav>
     </header>

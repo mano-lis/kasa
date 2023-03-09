@@ -8,7 +8,6 @@ import rightArrowMobile from "../assets/vector_slider_right_mobile.png"
 function SlideShow({ data }) {
   const [pictureIndex, setPictureIndex] = useState(0)
   const slidePicture = (e) => {
-    console.log(e.target)
     if (e.target.classList.contains("left-arrow")) {
       pictureIndex > 0
         ? setPictureIndex(pictureIndex - 1)

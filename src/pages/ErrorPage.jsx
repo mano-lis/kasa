@@ -13,7 +13,7 @@ function ErrorPage() {
       <div className="main-container-error">
         <h1>404</h1>
         <p>Oops! La page que vous demandez n'existe pas</p>
-        <Link to={`/`}>Retourner sur la page d'accueil</Link>
+        <Link to={"/"}>Retourner sur la page d'accueil</Link>
       </div>
       <Footer />
     </>

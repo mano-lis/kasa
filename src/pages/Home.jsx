@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <div className="main-container">
-      <Banner source={homeBanner} altText={`image de montagne`} home={true} />
+      <Banner source={homeBanner} altText={"image de montagne"} home={true} />
       <div className="cards-container">
         {datas.map((data, i) => {
           return <Card key={data.title + i} data={data} isLoading={isLoading} />
