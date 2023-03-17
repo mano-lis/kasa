@@ -37,6 +37,14 @@
   }
 }
 
+.arrow-slide {
+  transform: rotate(0);
+  transition: transform 0.6s ease-in-out;
+  &.active {
+    transform: rotate(180deg);
+  }
+}
+
 .collapse-text-content {
   padding: 2%;
   p,

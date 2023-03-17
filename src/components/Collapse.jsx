@@ -9,7 +9,11 @@ function Collapse({ collapseTitle, content, HeaderElement = "h1" }) {
     <section className="collapse-block">
       <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
         <HeaderElement>{collapseTitle}</HeaderElement>
-        <img src={arrow} alt="icône de dropdown" className="arrow-slide" />
+        <img
+          src={arrow}
+          alt="icône de dropdown"
+          className={isOpen ? "arrow-slide active" : "arrow-slide"}
+        />
       </div>
       <article
         className={isOpen ? "collapse-content active" : "collapse-content"}
